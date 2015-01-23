@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Application</title>
+  	
+  	<link rel="stylesheet" type="text/css" href="<?php echo WEBROOT; ?>public/css/style.css">
+	<!-- Lancer Session et recuperer page courante -->
+</head>
+
+<body>
+	<div class="filtre"></div>
+
+	<div class="banner">
+		<input type="text" placeholder="Rechercher"/>
+
+		<!-- Si session pleine alors bouton de deconnexion-->
+		<div class="connect">
+		<?php if($_SESSION) : ?>
+			
+			<!-- href qui renvoi qui fait un session destroy et renvoi sur la page courante -->
+			<a href='request/actionConnect.php?session=destroy&page=<?php echo $page; if($_GET){ echo'&type='.$_GET['type']; } if(isset($_GET['idTopic'])){echo '&idTopic='.$_GET['idTopic'];} ?>'>deconnexion</a>
+
+		<?php else: ?>
+
+			<!-- Dans le cas contraire, on a les bouton de connexion-->
+				<span id="inscription">Inscription</span>/<span id="connexion">Connexion</span>
+			
+		<?php endif; ?>
+		</div>
+	</div>
+	
+	<nav>
+		<div class="bouton_menu"></div>
+		<ul>
+			<li><a href="index.php">Accueil</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Profil</a></li>
+		</ul>
+	</nav>

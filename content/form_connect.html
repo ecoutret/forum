@@ -1,0 +1,22 @@
+<div id="subscribe" class="form_connect">
+Inscription au site
+<div class="close" ></div>
+	<form method="post" action="request/actionConnect.php?page=<?php echo $page; if($_GET){ echo'&type='.$_GET['type']; } if(isset($_GET['idTopic'])){echo '&idTopic='.$_GET['idTopic'];} ?>">
+		<input type="text" name="user_firstName" placeholder="Prénom" autocomplete="off" />
+		<input type="text" name="user_name" placeholder="Nom" autocomplete="off" />
+
+		<input type="email" name="user_mail" placeholder="Mail" autocomplete="off" />
+		
+		<input type="submit" name="inscription" value="S'inscrire"/>
+	</form>
+</div>
+<div id="signIn" class="form_connect">
+	Connexion au site
+	<div class="close" ></div>
+	<form method="post" action="request/actionConnect.php?page=<?php echo $page; if($_GET){ echo'&type='.$_GET['type']; } if(isset($_GET['idTopic'])){echo '&idTopic='.$_GET['idTopic'];} ?>">
+		<input type="text" name="user_name" placeholder="Nom" autocomplete="off"  />
+		<input type="email" name="user_mail" placeholder="Mail" autocomplete="off"  />
+		
+		<input type="submit" name="connexion" value="Se connecter"/>
+	</form>
+</div> 

@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'FuturaStdBook';
+    src: url('fonts/futurastd-book.eot');
+    src: url('fonts/futurastd-book.eot') format('embedded-opentype'),
+         url('fonts/futurastd-book.woff2') format('woff2'),
+         url('fonts/futurastd-book.woff') format('woff'),
+         url('fonts/futurastd-book.ttf') format('truetype'),
+         url('fonts/futurastd-book.svg#FuturaStdBook') format('svg');
+}
+
+@font-face {
+    font-family: 'FuturaStdLight';
+    src: url('fonts/futurastd-light.eot');
+    src: url('fonts/futurastd-light.eot') format('embedded-opentype'),
+         url('fonts/futurastd-light.woff2') format('woff2'),
+         url('fonts/futurastd-light.woff') format('woff'),
+         url('fonts/futurastd-light.ttf') format('truetype'),
+         url('fonts/futurastd-light.svg#FuturaStdLight') format('svg');
+}
+
+body{
+  background-color:#AEAFAF;
+  background-image:url('images/back.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  font-family: 'FuturaStdBook';
+}
+
+li{
+  list-style: none;
+  margin-bottom:28px;
+}
+
+a{
+  color:#fff;
+  text-decoration:none;
+  margin-left: 20px;
+  transition:3s;
+  transition-delay: 0s;
+  transition-property: all;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+/** Banniere du haut **/
+.banner{
+  height:14%;
+  width: 100%;
+  background-color: #e7e7e7;
+  display:block;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+
+.banner input{
+  border-radius: 90px;
+  background: #cfcfcf;
+  text-align: center;
+  color: black;
+  height: 35px;
+  width:228px;
+  border: 0px;
+  display: block;
+  top:32%;
+  left: 7%;
+  position: absolute;
+  font-family: 'FuturaStdLight';
+}
+
+.banner .connect{
+  color:#24749f;
+  display: block;
+  position: absolute;
+  right: 2%;
+  top: 40%;
+  font-size: 18px;
+}
+
+.banner .connect a{
+  font-size: 18px;
+  color:#24749f;
+}
+
+.banner span{
+  cursor:pointer;
+}
+
+/** filtre **/
+.filtre{
+  width: 100%;
+  height: 100%;
+  display:none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:rgba(0,0,0,0.5);
+  z-index: 100;
+}
+
+/** css nav sans hover **/
+nav {
+  position: fixed;
+  right: 0;
+  top: 14%;
+  bottom: 0;
+  display: block;
+  height: auto;
+  min-width:37px;
+  width:37px;
+  background-color: rgba(61,61,61,0.4); /** #3d3d3d**/
+  transition-delay: 0s;
+  transition-duration: 1.5s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+
+
+nav .bouton_menu{
+  width:23px;
+  height:19px;
+  background-image:url('images/bouton.png');
+  margin-left:7px;
+  margin-top:13px;
+  transition-delay:0s;
+  transition-duration:1.5s;
+}
+
+nav a {
+  opacity:0;
+  font-size: 20px;
+  margin-bottom:5px;
+}
+
+/** css nav avec hover **/
+
+nav:hover {
+  position: fixed;
+  right: 0;
+  top: 14%;
+  bottom: 0;
+  height: auto;
+  width: 9%;
+  background-color: rgba(61,61,61,0.4);
+}
+
+nav:hover a {
+  opacity:1;
+  margin-left:-25px;
+}
+
+nav:hover .bouton_menu {
+  opacity:0;
+  margin-left:80px;
+}
+
+
+/**div all subject**/
+
+.all_subject{
+  width:31%;
+  height:78%;
+  position: absolute;
+  display: block;
+  top:20%;
+  left:5%;
+}
+
+.all_subject .subject{
+  width:100%;
+  height:23%;
+  background: blue;
+  margin-bottom: 11%;
+  background-color: rgba(230, 230, 230, 0.6);
+  color:#fff;
+  overflow: hidden;
+}
+
+.all_subject .subject .logo_subject{
+  width: 15%;
+  overflow: hidden;
+  float: left;
+  padding-left:8%;
+  padding-top:2%;
+}
+
+.all_subject .subject .logo_subject.android{
+  padding-top: 5%;
+}
+
+.all_subject .subject .logo_subject.ios{
+  padding-top: 1%;
+}
+
+.all_subject .subject .logo_subject.win{
+  padding-top: 6%;
+}
+
+.all_subject .subject .info_subject{
+  width: 72%;
+  float: right;
+  font-size: 110%;
+}
+
+.all_subject .subject .info_subject span{
+  font-size: 30px;
+}
+/** div information **/
+
+.information{
+  width:442px;
+  height:161px;
+  background-color:rgba(89, 155, 190 , 0.1);
+  color:#24749f;
+  text-align: center;
+  display: block;
+  top: 35%;
+  right:10%;
+  font-size: 18px;
+  position: absolute;
+}
+
+/** Page forum topic **/
+
+.all_question{
+  width:34%;
+  height:76%;
+  position: absolute;
+  display: block;
+  top:20%;
+  left:7%;
+  overflow-x:auto;
+}
+
+.all_question a{
+  margin-left:0;
+}
+
+.all_question .the_question{
+  width:100%;
+  background-color:rgba(230, 230, 230, 0.6 );
+  color:#dde2ed;
+  margin-bottom: 29px;
+  font-size:18px;
+}
+.all_question .the_question .subject{
+  margin-left:15px;
+}
+
+.all_question .the_question .subject span{
+  font-size: 30px;
+}
+
+.all_question .the_question  .subject span.info{
+  font-size: 12px;
+  float: right;
+  margin-top:5px;
+}
+
+.post{
+  width:461px;
+  height:378px;
+  background-color:rgba(89, 155, 190 , 0.1);
+  color:#24749f;
+  text-align: center;
+  display: block;
+  top: 31%;
+  right:10%;
+  font-size: 36px;
+  position: absolute;
+}
+
+.post input[type="submit"]{
+  height:44px;
+  width:269px;
+  color:#a6c0cf;
+  border:0;
+  background-color:#24749f;
+  border-radius:20px;
+  font-size: 25px;
+  cursor:pointer;
+}
+
+.post input, textarea{
+  text-align: center;
+  border: 0;
+  background-color:#cfcfcf;
+  font-size:24px;
+  border-radius:23px;
+  color:#000;
+}
+
+
+.post input{
+  height:43px;
+  width:422px;
+  margin-bottom:14px;
+}
+
+.post textarea{
+  width:382px;
+  height: 172px;
+}
+
+.form_connect{
+  z-index: 200;
+  display: none;
+  position:absolute;
+  margin-left:30%;
+  margin-top: 12%;
+  width: 549px;
+  height: 349px;
+  background-color:#e6e6e6;
+  text-align: center;
+  color:#24749f;
+  border-radius: 30px;
+  font-size:36px;
+}
+
+.form_connect .close{
+  background-image: url('images/close.png');
+  width: 18px;
+  height: 18px;
+  float: right;
+  margin-right:15px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.form_connect input{
+  width: 269px;
+  height: 44px;
+  border:0;
+  color:#000;
+  border-radius: 25px;
+  text-align:center;
+  font-size:18px;
+  margin-bottom:20px;
+  background-color:#cfcfcf;
+}
+
+.form_connect input[type="submit"]{
+  background-color: #24749f;
+  color:#fff;
+}
